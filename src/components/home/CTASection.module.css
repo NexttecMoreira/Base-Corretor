@@ -1,0 +1,88 @@
+.section {
+  position: relative;
+  padding-block: clamp(4rem, 9vw, 8.5rem);
+  background: var(--surface-2);
+  border-top: 1px solid var(--hairline);
+  overflow: hidden;
+}
+/* Textura sutil "planta baixa" (nome da paleta: Blueprint) */
+.texture {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.07;
+  background-image:
+    linear-gradient(var(--accent) 1px, transparent 1px),
+    linear-gradient(90deg, var(--accent) 1px, transparent 1px);
+  background-size: 48px 48px;
+  -webkit-mask-image: radial-gradient(120% 90% at 85% 8%, #000, transparent 68%);
+  mask-image: radial-gradient(120% 90% at 85% 8%, #000, transparent 68%);
+}
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2.5rem, 6vw, 5.5rem);
+  align-items: center;
+}
+
+.pitch {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.num {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--accent);
+}
+.pitch h2 {
+  max-width: 16ch;
+  margin-top: 0.6rem;
+}
+.pitch > p {
+  color: var(--ink-70);
+  font-size: var(--text-lg);
+  max-width: 44ch;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-top: 0.8rem;
+}
+.info li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-size: var(--text-base);
+  color: var(--ink-70);
+}
+.info svg {
+  color: var(--accent);
+  margin-top: 0.2rem;
+  flex: none;
+}
+.info a:hover {
+  color: var(--ink);
+}
+.hours {
+  font-size: var(--text-sm);
+  color: var(--ink-50);
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--hairline);
+}
+
+.card {
+  padding: clamp(1.5rem, 4vw, 2.8rem);
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-1);
+}
+
+@media (max-width: 880px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

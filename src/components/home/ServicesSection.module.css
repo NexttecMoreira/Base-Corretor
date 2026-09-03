@@ -1,0 +1,31 @@
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.6rem, 3.5vw, 3rem) clamp(2rem, 5vw, 4.5rem);
+}
+.item {
+  display: flex;
+  gap: 1.2rem;
+}
+.num {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--accent);
+  line-height: 1.2;
+  flex: none;
+}
+.content h3 {
+  font-size: var(--text-lg);
+  margin-bottom: 0.5rem;
+}
+.content p {
+  color: var(--ink-70);
+  font-size: var(--text-sm);
+  max-width: 42ch;
+}
+
+@media (max-width: 720px) {
+  .list {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,162 @@
+/* =============================================================================
+   THEME — arquivo principal de personalização por cliente
+   -----------------------------------------------------------------------------
+   Tema ÚNICO e CLARO. Para cada corretor(a) você normalmente só mexe aqui e em
+   src/config/site.config.ts.
+
+   Como trocar a identidade visual:
+   1. Ajuste as cores da marca em ":root" (--brand, --accent e derivados).
+   2. Ou descomente um dos presets no fim do arquivo.
+   3. Fontes: troque o <link> do Google Fonts em index.html e os nomes em
+      --font-display / --font-sans.
+
+   Obs.: src/config/site.config.ts também consegue sobrescrever --brand/--accent
+   em tempo de execução (campo "theme"). Use um ou outro.
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* =========================================================================
+     PALETA "Alpes" — branco quente, quase-preto e verde-musgo.
+     Base clara e arejada (branco quente → bege → branco puro nos cards),
+     texto quase preto e o verde-musgo profundo como única cor — usado tanto
+     nas grandes superfícies da marca (rodapé, painel, faixas) quanto nos
+     detalhes (links, linhas, botões). Visual editorial, calmo, atemporal.
+     ========================================================================= */
+
+  /* ---- Branco quente + beges (superfícies) ---- */
+  --paper: #faf8f4;
+  --paper-2: #f1ede4;
+  --surface: #ffffff;
+  --surface-2: #f5f2ea;
+
+  /* ---- Quase-preto + cinzas quentes (texto) ---- */
+  --ink: #1c1b18;
+  --ink-70: #57534b;
+  --ink-50: #8a857a;
+
+  /* ---- Linhas/contornos (usados com parcimônia — o site evita “caixas”) ---- */
+  --hairline: rgba(28, 27, 24, 0.1);
+  --hairline-strong: rgba(28, 27, 24, 0.2);
+
+  /* ---- Verde-musgo (marca: rodapé, painel, faixas, botões sólidos) ---- */
+  --brand: #3a5145;
+  --brand-strong: #47624f;
+  --brand-ink: #f7f5ef;
+
+  /* ---- Verde-musgo (destaque interativo) ---- */
+  --accent: #3a5145;
+  --accent-strong: #4c6a58;
+  --accent-ink: #f7f5ef;
+
+  --danger: #b4463a;
+  --success: #3f7f5c;
+
+  /* ---- Tipografia ---- */
+  --font-display: 'Fraunces', 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --tracking-label: 0.22em;
+  --tracking-tight: -0.02em;
+  --leading-tight: 1.06;
+  --leading-body: 1.68;
+
+  /* Escala fluida (min → max conforme a largura da viewport).
+     Mínimos pensados para caber bem em telas de ~360px. */
+  --text-xs: clamp(0.72rem, 0.69rem + 0.15vw, 0.8rem);
+  --text-sm: clamp(0.84rem, 0.81rem + 0.15vw, 0.92rem);
+  --text-base: clamp(0.96rem, 0.93rem + 0.2vw, 1.06rem);
+  --text-lg: clamp(1.08rem, 1rem + 0.4vw, 1.3rem);
+  --text-xl: clamp(1.28rem, 1.1rem + 0.9vw, 1.9rem);
+  --text-2xl: clamp(1.55rem, 1.25rem + 1.6vw, 2.9rem);
+  --text-3xl: clamp(1.95rem, 1.45rem + 2.6vw, 4.4rem);
+  --text-4xl: clamp(2.35rem, 1.6rem + 4vw, 6.4rem);
+
+  /* ---- Espaçamento / medidas ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+  --space-11: 10rem;
+
+  --container: 1290px;
+  --container-narrow: 940px;
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+
+  /* Cantos generosos — o visual foge do “quadrado” */
+  --radius-sm: 10px;
+  --radius: 16px;
+  --radius-lg: 26px;
+  --radius-pill: 999px;
+
+  /* ---- Sombras (leves — o fundo é claro) ---- */
+  --shadow-1: 0 1px 2px rgba(28, 27, 24, 0.05), 0 10px 30px -14px rgba(28, 27, 24, 0.14);
+  --shadow-2: 0 2px 8px rgba(28, 27, 24, 0.07), 0 28px 60px -22px rgba(28, 27, 24, 0.22);
+  --shadow-focus: 0 0 0 3px color-mix(in srgb, var(--accent) 30%, transparent);
+
+  /* ---- Movimento ---- */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-1: 180ms;
+  --dur-2: 360ms;
+  --dur-3: 620ms;
+
+  --header-h: 84px;
+  /* Altura da barra de ação fixa no rodapé (só mobile, página do imóvel). */
+  --action-bar-h: 0px;
+}
+
+/* No celular o cabeçalho é mais enxuto. */
+@media (max-width: 640px) {
+  :root {
+    --header-h: 62px;
+  }
+}
+
+/* =============================================================================
+   PRESETS ALTERNATIVOS
+   Descomente UM bloco inteiro para trocar a paleta da marca de uma vez.
+   ========================================================================== */
+
+/* ---- Preset "Latão" (claro + carvão + latão fosco) ----
+:root {
+  --paper: #f7f4ee;
+  --paper-2: #efe9dd;
+  --surface: #ffffff;
+  --surface-2: #f4efe4;
+  --ink: #26221c;
+  --ink-70: #625b50;
+  --ink-50: #948c7d;
+  --brand: #2b2620;
+  --brand-strong: #3a342b;
+  --brand-ink: #f7f4ee;
+  --accent: #9a7b4f;
+  --accent-strong: #b08f5e;
+  --accent-ink: #ffffff;
+}
+*/
+
+/* ---- Preset "Azul de Prússia" (claro + azul profundo) ----
+:root {
+  --paper: #f7f7f5;
+  --paper-2: #ecece9;
+  --surface: #ffffff;
+  --surface-2: #f2f2ef;
+  --ink: #1a1c1f;
+  --ink-70: #52565c;
+  --ink-50: #888d94;
+  --brand: #1f3a52;
+  --brand-strong: #2b4d6b;
+  --brand-ink: #f4f7fa;
+  --accent: #1f3a52;
+  --accent-strong: #2b4d6b;
+  --accent-ink: #f4f7fa;
+}
+*/

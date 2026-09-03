@@ -1,0 +1,142 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 760px;
+}
+.head h1 {
+  font-size: var(--text-2xl);
+}
+.head p {
+  color: var(--ink-50);
+  font-size: var(--text-sm);
+  margin-top: 0.3rem;
+}
+
+.card {
+  padding: clamp(1.4rem, 3vw, 2rem);
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-lg);
+}
+.card h2 {
+  font-size: var(--text-lg);
+  margin-bottom: 0.6rem;
+}
+.desc {
+  font-size: var(--text-sm);
+  color: var(--ink-70);
+  max-width: 60ch;
+}
+
+.stats {
+  display: flex;
+  gap: 2.5rem;
+  margin: 1.3rem 0;
+  padding: 1.1rem 0;
+  border-block: 1px solid var(--hairline);
+}
+.stats dt {
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-50);
+  margin-bottom: 0.3rem;
+}
+.stats dd {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+}
+.warn {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-style: normal;
+  color: var(--danger);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.danger:hover {
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+.files {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin: 1.2rem 0;
+}
+.files li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--accent);
+}
+.files code {
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: var(--text-sm);
+  color: var(--ink);
+}
+.files span {
+  font-size: var(--text-xs);
+  color: var(--ink-50);
+}
+
+.note {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0.9rem 1rem;
+  font-size: var(--text-sm);
+  color: var(--ink-70);
+  background: var(--surface-2);
+  border-radius: var(--radius);
+}
+.note svg {
+  color: var(--success);
+}
+.note code {
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 0.9em;
+  padding: 0.1em 0.35em;
+  background: var(--paper-2);
+  border-radius: 3px;
+}
+
+.confirm {
+  padding: 2rem;
+}
+.confirm h3 {
+  font-size: var(--text-lg);
+  margin-bottom: 0.5rem;
+}
+.confirm p {
+  color: var(--ink-70);
+  font-size: var(--text-sm);
+}
+.confirmBtns {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 1.5rem;
+}
+.confirmDanger {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: #fff;
+}
+.confirmDanger:hover {
+  background: #8a2a1a;
+  border-color: #8a2a1a;
+}
+
+@media (max-width: 600px) {
+  .stats {
+    gap: 1.5rem;
+  }
+}

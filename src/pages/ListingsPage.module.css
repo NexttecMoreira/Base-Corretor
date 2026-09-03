@@ -1,0 +1,116 @@
+.page {
+  padding-top: var(--header-h);
+}
+
+.head {
+  padding-block: clamp(1.8rem, 4vw, 3rem) clamp(1.2rem, 2.5vw, 1.8rem);
+}
+.head h1 {
+  margin: 0.6rem 0 0.4rem;
+  font-size: var(--text-2xl);
+}
+.head p {
+  color: var(--ink-70);
+  font-size: var(--text-sm);
+  max-width: 52ch;
+}
+.head a {
+  color: var(--accent);
+  border-bottom: 1px solid currentColor;
+}
+
+.body {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+.grid {
+  min-height: 40vh;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.8rem;
+  padding: clamp(3rem, 8vw, 6rem) 1.5rem;
+  color: var(--ink-50);
+  background: var(--surface-2);
+  border: 1px dashed var(--hairline-strong);
+  border-radius: var(--radius-lg);
+}
+.empty h3 {
+  color: var(--ink);
+}
+.empty p {
+  max-width: 42ch;
+  color: var(--ink-70);
+}
+.empty button {
+  margin-top: 0.6rem;
+}
+
+.cta {
+  padding-block: clamp(3.5rem, 8vw, 7rem);
+  background: var(--brand);
+  color: var(--brand-ink);
+}
+.ctaInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+.cta :global(.eyebrow) {
+  color: color-mix(in srgb, var(--brand-ink) 65%, transparent);
+}
+.cta h2 {
+  color: var(--brand-ink);
+  margin: 0.7rem 0;
+}
+.cta p {
+  color: color-mix(in srgb, var(--brand-ink) 78%, transparent);
+  max-width: 46ch;
+}
+.cta :global(.field-label) {
+  color: color-mix(in srgb, var(--brand-ink) 70%, transparent);
+}
+.cta :global(.input),
+.cta :global(.select),
+.cta :global(.textarea) {
+  background: color-mix(in srgb, var(--brand-ink) 8%, transparent);
+  border-color: color-mix(in srgb, var(--brand-ink) 24%, transparent);
+  color: var(--brand-ink);
+}
+.cta :global(.input)::placeholder,
+.cta :global(.textarea)::placeholder {
+  color: color-mix(in srgb, var(--brand-ink) 45%, transparent);
+}
+
+@media (max-width: 880px) {
+  .ctaInner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .head {
+    padding-block: 1.4rem 1rem;
+  }
+  .head h1 {
+    font-size: var(--text-xl);
+    margin: 0.5rem 0 0.35rem;
+  }
+  .head p {
+    font-size: var(--text-xs);
+    text-wrap: pretty;
+  }
+  .body {
+    gap: 1.25rem;
+    padding-bottom: 3rem;
+  }
+  .cta {
+    padding-block: 2.75rem;
+  }
+}

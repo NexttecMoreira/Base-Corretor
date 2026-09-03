@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#faf8f4" />
+  <rect x="0" y="0" width="1200" height="630" fill="#3a5145" opacity="0.06" />
+  <line x1="94" y1="232" x2="240" y2="232" stroke="#3a5145" stroke-width="3" />
+  <text
+    x="90"
+    y="300"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="86"
+    fill="#1c1b18"
+  >
+    Marina Alcântara
+  </text>
+  <text
+    x="94"
+    y="360"
+    font-family="Georgia, serif"
+    font-size="28"
+    letter-spacing="6"
+    fill="#3a5145"
+  >
+    IMÓVEIS DE ALTO PADRÃO
+  </text>
+</svg>

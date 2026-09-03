@@ -1,0 +1,52 @@
+.footer {
+  background: var(--paper-2);
+  border-top: 1px solid var(--hairline);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+  flex-wrap: wrap;
+  padding-block: 1.15rem;
+  font-size: var(--text-xs);
+  color: var(--ink-50);
+}
+
+.brand {
+  color: var(--ink-70);
+}
+.sep {
+  opacity: 0.5;
+  margin-inline: 0.15rem;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.links a {
+  color: var(--ink-50);
+  transition: color var(--dur-2) var(--ease);
+}
+.links a:hover {
+  color: var(--accent);
+}
+
+.copy {
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .row {
+    justify-content: center;
+    text-align: center;
+  }
+  .links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.9rem;
+  }
+}

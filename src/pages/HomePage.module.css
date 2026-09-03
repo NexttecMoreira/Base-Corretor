@@ -1,0 +1,19 @@
+/* Bloco contínuo: "quem conduz" + "onde atuo" + "contato direto".
+   Um único respiro/borda para o grupo todo, em vez de 3 seções separadas. */
+.about {
+  background: var(--paper-2);
+  border-top: 1px solid var(--hairline);
+  padding-block: clamp(3rem, 6vw, 5.5rem);
+}
+.about > section {
+  padding-block: clamp(1.75rem, 4vw, 3rem) !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+/* "Onde atuo": discreto — quase só um respiro entre "quem conduz" e "contato". */
+.about > :global(#regioes) {
+  padding-block: 0.9rem !important;
+  border-top: 1px solid var(--hairline) !important;
+  border-bottom: 1px solid var(--hairline) !important;
+  margin-block: clamp(1rem, 3vw, 2rem);
+}

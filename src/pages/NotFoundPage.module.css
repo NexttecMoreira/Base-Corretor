@@ -1,0 +1,24 @@
+.wrap {
+  min-height: 78vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  padding: var(--header-h) 1.5rem 4rem;
+}
+.wrap h1 {
+  font-size: var(--text-3xl);
+}
+.wrap > p {
+  color: var(--ink-70);
+  max-width: 40ch;
+}
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}

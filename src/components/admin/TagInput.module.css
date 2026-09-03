@@ -1,0 +1,78 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.5rem;
+  background: var(--surface);
+  border: 1px solid var(--hairline-strong);
+  border-radius: var(--radius);
+}
+.box:focus-within {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-focus);
+}
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.4rem 0.35rem 0.7rem;
+  font-size: var(--text-xs);
+  color: var(--ink);
+  background: var(--paper-2);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-pill);
+}
+.tag button {
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  color: var(--ink-50);
+  border-radius: 50%;
+}
+.tag button:hover {
+  color: var(--danger);
+  background: color-mix(in srgb, var(--danger) 12%, transparent);
+}
+.input {
+  flex: 1;
+  min-width: 140px;
+  border: 0;
+  background: transparent;
+  padding: 0.3rem;
+  color: var(--ink);
+}
+.input:focus {
+  outline: none;
+}
+.addBtn {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  color: var(--accent-ink);
+  background: var(--accent);
+  border-radius: var(--radius);
+}
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.suggestions button {
+  font-size: var(--text-xs);
+  color: var(--ink-70);
+  padding: 0.35rem 0.7rem;
+  border: 1px dashed var(--hairline-strong);
+  border-radius: var(--radius-pill);
+  transition: color var(--dur-2) var(--ease), border-color var(--dur-2) var(--ease);
+}
+.suggestions button:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}

@@ -1,0 +1,33 @@
+.section {
+  padding-block: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.85rem;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.55rem 0.7rem;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 360;
+  color: var(--ink-70);
+  max-width: 60ch;
+}
+.list a {
+  color: var(--ink-70);
+  padding-bottom: 1px;
+  border-bottom: 1px solid transparent;
+  transition: color var(--dur-2) var(--ease), border-color var(--dur-2) var(--ease);
+}
+.list a:hover {
+  color: var(--ink);
+  border-color: var(--accent);
+}
+.sep {
+  color: var(--ink-50);
+}
