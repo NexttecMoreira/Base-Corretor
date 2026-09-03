@@ -12,9 +12,13 @@ applyBrandTheme()
 const container = document.getElementById('root')
 if (!container) throw new Error('Elemento #root não encontrado.')
 
+/* Sem a barra final: em dev vira "" (raiz), em produção vira "/Base-Corretor".
+   Assim as rotas do React Router funcionam sob o subcaminho do GitHub Pages. */
+const routerBase = import.meta.env.BASE_URL.replace(/\/$/, '')
+
 createRoot(container).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={routerBase}>
       <ToastProvider>
         <AuthProvider>
           <App />
