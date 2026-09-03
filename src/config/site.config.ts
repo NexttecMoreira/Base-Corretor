@@ -223,7 +223,7 @@ export const site: SiteConfig = {
   admin: {
     username: 'admin',
     password: 'imoveis2025',
-    hint: 'Área de demonstração — acesso local, sem servidor.',
+    hint: 'Acesso exclusivo do corretor.',
   },
 }
 

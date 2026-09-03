@@ -95,13 +95,6 @@ export function LoginPage() {
             {loading ? 'Entrando…' : 'Acessar painel'}
             {!loading && <IconArrowRight width={17} height={17} />}
           </button>
-
-          <p className={styles.demo}>
-            <strong>Demonstração:</strong> usuário <code>{site.admin.username}</code> · senha{' '}
-            <code>{site.admin.password}</code>
-            <br />
-            <span>Defina os dados reais em <code>src/config/site.config.ts</code>.</span>
-          </p>
         </form>
       </div>
     </div>
