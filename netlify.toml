@@ -1,0 +1,17 @@
+# Configuração de build/deploy no Netlify.
+# O site é servido na raiz do domínio, então NÃO defina VITE_BASE aqui
+# (o padrão em vite.config.ts já é "/").
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# SPA: qualquer rota cai no index.html (o React Router assume daí).
+# Redundante com public/_redirects, mas explícito aqui também.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

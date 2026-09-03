@@ -3,14 +3,12 @@ import { fileURLToPath, URL } from 'node:url'
 import react from '@vitejs/plugin-react'
 
 /* Caminho base da aplicação.
-   No GitHub Pages o site fica em  https://<usuario>.github.io/<repo>/  — ou seja,
-   num subcaminho ("/Base-Corretor/"). O workflow de deploy define VITE_BASE
-   automaticamente a partir do nome do repositório, então normalmente você não
-   precisa mexer aqui.
-   - Rodando local (dev): sempre "/".
-   - Build sem VITE_BASE: cai no padrão abaixo (troque se renomear o repo).
-   - Domínio próprio (CNAME): use base "/" — defina VITE_BASE=/ no deploy. */
-const BASE = process.env.VITE_BASE ?? '/Base-Corretor/'
+   - Netlify / Vercel / Cloudflare Pages / domínio próprio  ->  "/" (padrão).
+   - GitHub Pages de projeto (site em usuario.github.io/REPO/) precisa de
+     "/REPO/": nesse caso defina a env VITE_BASE="/Base-Corretor/"
+     (o workflow .github/workflows/deploy.yml já faz isso sozinho).
+   Em dev é sempre "/". */
+const BASE = process.env.VITE_BASE ?? '/'
 
 // https://vite.dev/config/
 export default defineConfig(({ command }) => ({
